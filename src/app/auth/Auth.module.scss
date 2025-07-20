@@ -1,0 +1,71 @@
+
+@import '../../styles/_mixins';
+@import '../../styles/_variables';
+
+.container {
+  @include glass-container;
+}
+
+.formBox {
+  position: relative;
+  z-index: 1;
+  background: $foreground;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(127, 90, 240, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  @include fadeIn;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: $white;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #2d2d44;
+    color: $white;
+    transition: 0.3s ease;
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: #353557;
+      box-shadow: 0 0 0 2px $primary;
+    }
+  }
+
+  .error {
+    color: $error;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .button {
+    background-color: $primary;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import './_variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Vazir', sans-serif;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../../public/font/Vazir.woff2') format('woff2'),
+       url('../../public/font/Vazir.woff') format('woff'),
+       url('../../public/font/Vazir.eot') format('eot'),
+       url('../../public/font/Vazir.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}

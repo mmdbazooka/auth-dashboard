@@ -1,0 +1,49 @@
+
+@import '../../styles/_mixins';
+@import '../../styles/_variables';
+
+.container {
+  @include glass-container;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: $foreground;
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: $white;
+  box-shadow: 0 0 30px rgba(127, 90, 240, 0.2);
+  @include fadeIn;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    font-size: 1.1rem;
+    color: $gray;
+    margin-bottom: 2rem;
+  }
+
+  .logoutBtn {
+    background-color: $primary;
+    color: $white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: scale(1.05);
+    }
+  }
+}
